@@ -1,0 +1,320 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+
+
+.projects__container {
+    overflow-x:hidden;
+    display:flex;
+    /* flex-direction: column; Enable this to allow for mobile friendly implemntation */
+
+    z-index:20;
+    background:var(--color-bg-dark);
+
+}
+
+.projects_wavy {
+    background:transparent;
+}
+
+.projects__container-heading {
+    display:flex;
+    flex:0.9;
+    flex-direction:column;
+    margin:1rem 0rem 0rem 0rem;
+    z-index:2;
+
+
+}
+
+
+.projects__container-heading-container {
+    display:flex;
+    justify-content:flex-end;
+    background: var(--color-text-banner-dark);
+    width:34rem;
+    z-index:100;
+
+}
+.projects__container-heading-container-content {
+    display:flex;
+    flex-direction:column;
+    padding:14rem 6rem;
+}
+.projects__container-heading-container h1 {
+    font-size:64px;
+    font-family:var(--font-family);
+    letter-spacing:0.245em;
+    color:var(--color-text-text-dark);
+    text-shadow: 0px -7px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.projects__container-heading p {
+    font-size:28px;
+    font-family:var(--font-family);
+    line-height:30px;
+    letter-spacing: -0.015em;
+    color: var(--color-text-light);
+
+
+}
+
+.projects__container-heading-cta {
+    display:flex;
+    flex-direction:column;
+    width:100%;
+
+}
+
+.projects__container-heading-cta p {
+    font-size:16px;
+    font-family:var(--font-family-important);
+    letter-spacing:0.2em;
+    font-weight:400;
+    margin-top:2rem;
+    text-align:center;
+
+}
+
+.projects__container-heading-cta button {
+    border-radius:10rem;
+    border:0;
+    font-family: var(--font-family-important);
+    font-size:18px;
+    background:var(--color-text-gold);
+    border:2px solid var(--color-text-gold);
+
+    width:14rem;
+    height:35px;
+    align-self:center;
+    margin-top:0.5rem;
+
+    display:flex;
+    flex-direction: row;
+
+}
+
+.projects__container-heading-cta-mail {
+    flex:0.3;
+    align-self:center;
+    border-right:1px solid rgba(128, 128, 128, 0.61);
+
+}
+
+.projects__container-heading-cta button section {
+    flex:1;
+    justify-self:flex-start;
+    padding-right:10px;
+    align-self:center;
+}
+
+button:hover {
+    transition:all 0.3s ease-out;
+    background-color: var(--color-text-highlight);
+    color:white;
+    cursor:pointer;
+}
+
+
+.projects__container-carousel {
+    display:flex;
+    flex:1;
+    overflow-x:hidden;
+    opacity:1;
+    animation: from-right 2s ease-out;
+    animation-delay:1s;
+
+
+}
+
+.projects__project-container {
+    display:flex;
+    flex-direction:column;
+    background:#fff;
+    flex:1;
+    margin:3rem;
+    margin-bottom:0rem;
+
+    box-shadow:0px 0px 20px lightslategray;
+
+}
+
+
+/* Styling of the inside of project cards */
+
+
+.projects__project-image {
+    display:flex;
+    width:100%;
+}
+
+.projects__project-image img {
+    width:100%;
+}
+
+.projects__project-content-container {
+    display:flex;
+    flex:1;
+    padding:2rem 4rem;
+    flex-direction:column;
+
+}
+
+.projects__project-social-links {
+    display:flex;
+}
+.projects__project-social-links button {
+    display:flex;
+    margin-right:2rem;
+    background-color: var(--color-text-gold);
+    border:none;
+    outline:none;
+    padding:0.5rem 0.5rem;
+    border-radius:15px;
+    border:2px solid var(--color-text-gold);
+
+}
+
+
+
+
+
+.projects__project-social-links button p {
+    padding-left:15px;
+    justify-content:center;
+    align-self:center;
+}
+
+button:hover {
+    background-color: var(--color-text-highlight);
+    
+}
+
+.projects__project-content {
+
+}
+
+.projects__project-content h2 {
+    padding:1.5rem 0rem 1rem 0rem;
+}
+
+
+.animateTextUp {
+    animation-name:fade-up;
+    animation-duration:2s;
+
+}
+/* Changing styling of Alice Carousel */
+
+
+.alice-carousel__dots-item:not(.__custom) {
+
+}
+
+.alice-carousel__dots-item:not(.__custom).__active {
+    background-color:yellow;
+
+
+}
+.alice-carousel__prev-btn-item [data-area]::after,
+.alice-carousel__next-btn [data-area]::after {
+    color:yellow;
+    opacity:1;
+}
+
+@media screen and (max-width:1171px) {
+    .projects__container {
+        flex-direction:column;
+
+    }
+    .projects__container-heading-container-content {
+        padding-top:6rem;
+        padding-bottom:2rem;
+    }
+    .projects__container-carousel {
+        padding-left:0rem;
+        width:100vw;
+        padding:0rem;
+        padding-left:3rem;
+        padding-right:3rem;
+    }
+    .projects__project-social-links button {
+        padding:0.2rem 1rem;
+    }
+    .projects__project-social-links p {
+        font-size:0.6rem;
+    }
+}
+
+@media screen and (max-width:668px) {
+    .projects__container-carousel {
+        min-width:600px;
+        padding:0;
+        margin:0;
+    }
+    .projects__project-content-container {
+        min-width:500px;
+        padding:10px;
+    }
+    .projects__project-content {
+        padding:0;
+        margin:0;
+    }
+    .projects__project-content h2 {
+        font-size:1rem;
+        width:100%;
+    }
+    .projects__project-content p {
+        font-size:0.8rem;
+        width:100%;
+    }
+}
+@media screen and (max-width:584px) {
+    .projects__container-heading-container-content {
+        padding:2.5rem;
+    }
+    .projects__container-heading-container-content p {
+        font-size:18px;
+    }
+    .projects__container-heading-cta p {
+        font-size:16px;
+    }
+    .projects__container-heading-cta button section {
+        flex:1;
+        justify-self:flex-start;
+        align-self:center;
+    }
+    
+}
+@media screen and (max-width:600px) {
+    .projects__project-content-container {
+        min-width:300px;
+        padding:10px;
+    }
+
+    .projects__container-carousel {
+        min-width:300px;
+    }
+}
+
+/* For headers */
+
+@media screen and (max-width:662px) {
+    .projects__container-heading-container{
+        width:20rem;
+    }
+
+    .projects__container-heading-container h1 {
+        font-size:2.2rem;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .projects__container-heading-container {
+        width:12rem;
+    }
+    .projects__container-heading-container h1 {
+        font-size:1.3rem;
+        margin-left:20px;
+    }
+}
